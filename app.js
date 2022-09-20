@@ -4,6 +4,8 @@ const iniciar = document.getElementById('iniciar')
 const tabuleiro = document.querySelector('.tabuleiroFrente')
 const tabuleiroTela = document.querySelector('.tabuleiro')
 const tabuleiroVerso = document.querySelectorAll('.tabuleiroVerso')
+const tabuleiroVitoria = document.querySelector('.tabuleiroVitoria')
+const footer = document.querySelector('.footer')
 const entrada = document.querySelector('.inicial')
 const tela = document.querySelector('.tela')
 let cartas
@@ -39,9 +41,9 @@ const timer = () => {
     tempo.innerHTML = `<span>Tempo: </span>${minutoVal}:${segundosVal}`;
 }
 
-// //jogadas
-// let jogadasCount = 0,
-//     acertosCount = 0
+//jogadas
+let jogadasCount = 0,
+    acertosCount = 0
 // const contadorJogadas = () => {
 //     jogadasCount +=1
 //     jogadas.innerHTML = `<span>Jogadas: </span>${jogadasCount}`
@@ -61,7 +63,7 @@ const inicioJogo = ()=>{
                 <img src="logo_bonatto.jpg" height=100% alt="" />
             </div>
             <div class="verso">
-                <img class="logo" src="${matrizCartas[i].imagem}" height=100% alt="" />
+                <img class="logocarta" src="${matrizCartas[i].imagem}" height=100% alt="" />
             </div>
         </div>
         ` 
@@ -93,10 +95,6 @@ const inicioJogo = ()=>{
                         acertosCount+=1
                         carta1 = false
                         carta2 = false  
-                        if(acertosCount==6){
-                            console.log('fim do jogo');
-                            // fimJogo()
-                        }
                     }else{//cartas diferentes
                         let [carta1Temp, carta2Temp] = [carta1,carta2]
                         let delay = setTimeout(()=>{
@@ -112,12 +110,17 @@ const inicioJogo = ()=>{
     })
 }
 //evento de retorno do verso do tabuleiro
-tabuleiroVerso.forEach((e)=>{
+tabuleiroVerso.forEach((e)=>{    
     e.addEventListener('click',()=>{
+        if(acertosCount==6){
+            e.classList.add('hide')
+            fimJogo()
+        }else{
         let delay = setTimeout(()=>{
             e.classList.add('hide')
-        },100)
+        },700)
         tabuleiroTela.classList.remove('virado')
+        }
     })
 })
 
@@ -133,6 +136,11 @@ iniciar.addEventListener('click',()=>{
     inicioJogo()
 })
 
+const fimJogo = ()=>{
+    tabuleiro.classList.add('hide')
+    footer.classList.add('hide')
+    tabuleiroVitoria.classList.remove('hide')
+}
 
 
 ;
