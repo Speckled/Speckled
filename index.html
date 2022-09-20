@@ -1,0 +1,163 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Memória Eleições</title>
+    <style>
+        @import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@300;400;500&display=swap');
+    </style>
+    <link rel="stylesheet" href="main.css">
+</head>
+
+<body>
+    <div class="inicial">
+        <div>
+            <h1 class="justificado"> Oque é um candidato que faz a diferença?</h1>
+        </div>
+        <div>
+            <h2>Aquele que vai lutar por ti nos próximos 4 anos.</h2>
+        </div>
+        <div>
+            <h2>Aquele que tem trajetória e história na política gaúcha.</h2>
+        </div>
+        <div>
+            <h2>Aquele que engajado com a saúde do povo gaúcho. </h2>
+        </div>
+        <div>
+            <h1 class="justificado">Já sabes quem vai fazer a diferença por ti?</h1>
+        </div>
+        <div class="final">
+            <button id="iniciar"> Então vem conhecer!</button>
+        </div>
+    </div>
+    <div class="tela hide">
+        <div class="header">
+            <img class="imgcentralizada" src="cartao.jpg" alt="">
+        </div>
+        <div class="tabuleiro">
+            <div class="tabuleiroFrente hide">
+            </div>
+            <div class="tabuleiroVitoria ">
+                <img class="imgcentralizada" src="cartaoVitoria.jpg" alt="">
+            </div>
+            <div class="tabuleiroVerso saude hide">
+                <div>
+                    <h1 class="justificado" style="color:#015AAA ">Bonatto faz pela Saúde!</h1>
+                </div>
+                <div>
+                    <h3 class="justificado">Durante a pandemia, assumiu a Secretaria de Saúde</h3>
+                </div>
+                <div>
+                    <h3 class="justificado">Como prefeito construiu a UPA de Viamão</h3>
+                </div>
+                <div>
+                    <h3 class="justificado">Como deputado estadual vai lutar pela construção do hospital regional</h3>
+                </div>
+                <div class="footerVerso">
+                    <img class="imgcentralizada" src="cartaoSaude.jpg" alt="">
+                </div>
+            </div>
+            <div class="tabuleiroVerso educacao hide">
+                <div>
+                    <h1 class="justificado" style="color:#015AAA ">Professor Gestor</h1>
+                </div>
+                <div>
+                    <h3 class="justificado">Como prefeito entregou uniforme para todos alunos de Viamão</h3>
+                </div>
+                <div>
+                    <h3 class="justificado">Entregou 2 escolas e deixou mais 11 em construção</h3>
+                </div>
+                <div>
+                    <h3 class="justificado">Como deputado estadual vai levar sua experiência como professor e também
+                        gestor para trazer esperança de um mundo melhor</h3>
+                </div>
+                <div class="footerVerso">
+                    <img class="imgcentralizada" src="cartaoEducacao.jpg" alt="">
+                </div>
+            </div>
+            <div class="tabuleiroVerso desenvolvimento hide">
+                <div>
+                    <h1 class="justificado" style="color:#015AAA ">
+                        Bonatto faz pelo empreendedor
+                    </h1>
+                </div>
+                <div>
+                    <h3 class="justificado">Criou refaz Viamão, maior programa de renegociação de dívidas</h3>
+                </div>
+                <div>
+                    <h3 class="justificado">Implantou financiamento a juros zero durante a pandemia</h3>
+                </div>
+                <div>
+                    <h3 class="justificado">Como deputado estadual será o representante de Viamão e Região Metropolitana
+                        no centro do poder</h3>
+                </div>
+                <div class="footerVerso">
+                    <img class="imgcentralizada" src="cartaoDesenvolvimento.jpg" alt="">
+                </div>
+            </div>
+            <div class="tabuleiroVerso bonatto hide ">
+                <div>
+                    <h1 class="justificado" style="color:#015AAA ">Bonatto tem história</h1>
+                </div>
+                <div>
+                    <h3 class="justificado">Bonatto faz parte da política gaúcha a 40 anos</h3>
+                </div>
+                <div>
+                    <h3 class="justificado">Educar faz parte da sua vida, como prefeito construiu 11 escolas em Viamão
+                    </h3>
+                </div>
+                <div>
+                    <h3 class="justificado">Como deputado estadual vai buscar recursos para Região Metropolitana</h3>
+                </div>
+                <div class="footerVerso">
+                    <img class="imgcentralizada" src="cartaoBonatto.jpg" alt="">
+                </div>
+            </div>
+            <div class="tabuleiroVerso seguranca hide ">
+                <div>
+                    <h1 class="justificado" style="color:#015AAA ">Bonatto é mais segurança pra ti!</h1>
+                </div>
+                <div>
+                    <h3 class="justificado">Como prefeito criou a Delegacia da Mulher em Viamão </h3>
+                </div>
+                <div>
+                    <h3 class="justificado">Implantou as primeiras câmeras de monitoramento de Viamão </h3>
+                </div>
+                <div>
+                    <h3 class="justificado">Como deputado estadual vai buscar recursos para a instalação do cercamento
+                        eletrônico das principais vias da Região Metropolitana</h3>
+                </div>
+                <div class="footerVerso">
+                    <img class="imgcentralizada" src="cartaoSegurança.jpg" alt="">
+                </div>
+            </div>
+            <div class="tabuleiroVerso transporte hide">
+                <div>
+                    <h1 class="justificado" style="color:#015AAA ">Bonatto sabe o caminho!</h1>
+                </div>
+                <div>
+                    <h3 class="justificado">Durante a sua gestão reduziu em 55 centavos a passagem de ônibus</h3>
+                </div>
+                <div>
+                    <h3 class="justificado">Investiu no aumento e melhoria da frota escolar de Viamão</h3>
+                </div>
+                <div>
+                    <h3 class="justificado">Como deputado estadual vai lutar pela melhoria do sistema de transporte
+                        intermunicipal, com tarifas redução das tarifas e mais conforto para o trabalhador</h3>
+                </div>
+                <div class="footerVerso">
+                    <img class="imgcentralizada" src="cartaoTransporte.jpg" alt="">
+                </div>
+            </div>
+        </div>
+        <div class="footer">
+            <img class="imgcentralizada" src="cartao2.jpg" alt="">
+        </div>
+    </div>
+    <script src="app.js"></script>
+</body>
+
+</html>

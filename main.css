@@ -1,0 +1,179 @@
+*{
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+    font-family: 'Montserrat', sans-serif;
+}
+body{
+    background-color: #015AAA;
+}
+h1{
+    color: #FCB632;
+}
+h2{
+    color: aliceblue;
+    font-weight: 300;
+}
+h3{ 
+    font-size: 18px;
+    font-weight: 500;
+    color: black;
+}
+.inicial{
+    background-color: #015AAA;
+    color: #FCB632;
+    display: flex;
+    flex-direction: column;
+    justify-content: start;
+    gap: 5%;
+    width: 100vw;
+    height: 100vh;
+    padding: 0.6em;    
+}
+.final{
+    display: flex;
+    flex-grow: 1;
+    color: white;
+    align-items: center;
+    justify-content: center;
+}
+
+.tela{
+    display: flex;
+    flex-wrap: wrap;
+    flex-flow: column;
+    width: 100vw;
+    height: 100vh;
+}
+.header{
+    display: flex;
+    background-color: #015AAA;
+    color: white;
+    align-items: center;
+    justify-content: center;
+    width: 100vw;
+    height: 20vh;   
+}
+.footer{
+    background-color: #015AAA;
+    color: white;
+    width: 100vw;
+    display: flex;
+    height: fit-content;
+    align-items: center;
+    justify-content:center;
+    font-size: 24px;
+    flex-grow: 1;
+}
+.tabuleiro{
+    position: relative;
+    align-items: center;
+    width: 100vw;
+    height: 133vw;
+}
+.tabuleiroFrente,
+.tabuleiroVerso,
+.tabuleiroVitoria{
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    transition: transform 0.7s ease-out;
+    backface-visibility: hidden;
+}
+.tabuleiroFrente{
+    background-color:#FCDE9D;
+    display: grid;
+    gap: 0,6em;
+}
+.tabuleiroVitoria{
+    display: flex;
+    flex-flow: column;
+    justify-content:space-between;
+    align-items: center;
+    gap: 3%;
+    
+    background-color: #015AAA;
+}
+.tabuleiroVerso{
+    display: flex;
+    flex-flow: column;
+    justify-content:space-between;
+    align-items: center;
+    gap: 3%;
+    padding-top: 0.6em;
+    background-color: #FCDE9D;
+    color: #015AAA;
+    transform: rotateY(180deg);
+}
+.tabuleiro.virado .tabuleiroFrente{
+    transform: rotateY(180deg);
+}
+.tabuleiro.virado .tabuleiroVerso{
+    transform: rotateY(0deg);
+}
+.footerVerso{
+    display: flex
+
+}
+.carta{
+    position: relative;
+    padding-left: 2vw;
+    padding-top: 2vw;
+    width: 28vw;
+    height: 28vw;
+}
+.frente,
+.verso{
+    position: absolute;
+    border-radius: 0.6em;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+    height: 100%;
+    transition: transform 0.7s ease-out;
+    backface-visibility: hidden;
+    box-shadow: 3px 3px 3px rgba(0,0,0,.3)
+}
+.frente{
+    background-color:#FCB632 ;
+}
+.verso{
+    background-color: #FCB632;
+    transform: rotateY(180deg);
+}
+.carta.virada .frente{
+    transform: rotateY(180deg);
+}
+.carta.virada .verso{
+    transform: rotateY(0deg);
+}
+.logo{
+    border-radius: 0.6em;
+}
+.hide{
+    display: none;
+}
+.justificado{
+    text-align: center;
+}
+.imgcentralizada{
+    position: relative;
+    overflow: hidden;
+    object-fit: contain;
+    max-width: 100%;
+    max-height: 100%;
+}
+#iniciar{
+    background-color: #015AAA;
+    color:#FCB632 ;
+    height: fit-content;
+    width: fit-content;
+    font-size: 24px;
+    font-weight: 400;
+    padding: 1em;
+    border-style: solid;
+    border-color: #FCB632;
+    border-width: 4px;
+    border-radius: 0.6em;    
+}
