@@ -115,7 +115,7 @@ const inicioJogo = ()=>{
 tabuleiroVerso.forEach((e)=>{
     e.addEventListener('click',()=>{
         let delay = setTimeout(()=>{
-            this.classList.add('hide')
+            e.classList.add('hide')
         },100)
         tabuleiroTela.classList.remove('virado')
     })
